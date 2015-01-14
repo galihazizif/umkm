@@ -1,0 +1,82 @@
+<?php
+/* @var $this ControlpanelController */
+
+$this->breadcrumbs=array(
+	'Pengaturan Akun',
+);
+?>
+<h4>Rincian Akun</h4>
+<div class="row">
+	<div class="span4">
+		<table class="table table-condensed">
+			<tr>
+				<td>UMKM</td>
+				<td>:</td>
+				<td><?php print $model->adminUmkm->umkm_nama; ?></td>
+			</tr>
+			<tr>
+				<td>Administrator</td>
+				<td>:</td>
+				<td><?php print $model->adminUmkm->umkm_email; ?></td>
+			</tr>
+			<tr>
+				<td>Deskripsi</td>
+				<td>:</td>
+				<td><?php print $model->adminUmkm->umkm_deskripsi; ?></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td>:</td>
+				<td><?php print ucwords(strtolower($model->adminUmkm->umkmLokasiKode->alamatLengkap())) ?></td>
+			</tr>
+		</table>
+	</div>
+	<div class="span4">
+		<table class="table table-condensed">
+			
+			<tr>
+				<td>Email/Username</td>
+				<td>:</td>
+				<td><?php print $model->admin_email; ?></td>
+			</tr>
+			<tr>
+				<td>Tanggal Registrasi</td>
+				<td>:</td>
+				<td><?php print date_format(date_create($model->admin_regdate),'d M Y / H:i:s') ?></td>
+			</tr>
+		</table>
+	</div>
+	<div class="row span5">
+		<ul class="nav nav-tabs" id="myTab">
+		  <li class="active"><a data-toggle="tab" href="#home">Manajemen Akun</a></li>
+		  <li><a data-toggle="tab" href="#profile">Profile</a></li>
+		  <li><a data-toggle="tab" href="#messages">Messages</a></li>
+		  <li><a data-toggle="tab" href="#settings">Settings</a></li>
+		</ul>
+ 
+		<div class="tab-content">
+		  <div class="tab-pane active" id="home">
+		  	<?php foreach($model->adminUmkm->admins as $admin):?>
+		  		<li><?php print_r($admin->admin_email)?></li>
+		  	<?php endforeach; ?>
+
+			<?php print CHtml::ajaxLink('Tambah Akun',
+			array('site/xaddumkmemail'),
+			array(
+				'beforeSend'=>'function(){$("#myModal").html("Loading");$("#myModal").modal();}',
+				'success'=>'js:function(data){$("#myModal").html(data);}'),
+			array('class' =>'btn btn-primary'));?>
+		  </div>
+		  <div class="tab-pane" id="profile">profile</div>
+		  <div class="tab-pane" id="messages">Messages</div>
+		  <div class="tab-pane" id="settings">Settting</div>
+		</div>
+ 
+		<script>
+		  $(function () {
+		    $('#myTab a:first').tab('show');
+		  })
+		</script>
+	</div>
+
+</div>
