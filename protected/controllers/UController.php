@@ -60,7 +60,7 @@ class UController extends Controller
 	public function actionSearch(){
 
 		if(isset($_GET['a'])){
-			$umkm = Umkm::model()->find('umkm_alias = ?',array($_GET['a']));
+			$umkm = Umkm::model()->find('umkm_alias = ? AND umkm_status != '.Umkm::STATUS_SUSPENDED,array($_GET['a']));
 			if($umkm === null){
 				throw new CHttpException(404,'Produk tidak ditemukan');
 				Yii::app()->end();
@@ -98,7 +98,7 @@ class UController extends Controller
 
 	public function action1(){
 		if(isset($_GET['a'])){
-			$umkm = Umkm::model()->find('umkm_alias = ?',array($_GET['a']));
+			$umkm = Umkm::model()->find('umkm_alias = ? AND umkm_status !='.Umkm::STATUS_SUSPENDED,array($_GET['a']));
 			if($umkm === null){
 				throw new CHttpException(404,'UMKM tidak ditemukan');
 				Yii::app()->end();
@@ -124,9 +124,9 @@ class UController extends Controller
 	public function actionDetail(){
 
 		if(isset($_GET['a'])){
-			$umkm = Umkm::model()->find('umkm_alias = ?',array($_GET['a']));
+			$umkm = Umkm::model()->find('umkm_alias = ? AND umkm_status !='.Umkm::STATUS_SUSPENDED,array($_GET['a']));
 			if($umkm === null){
-				throw new Exception("Page Not Found", 404);
+				throw new CHttpException(404,"UMKM tidak ditemukan");
 				Yii::app()->end();
 			}
 		}
@@ -143,12 +143,10 @@ class UController extends Controller
 
 	}
 
-	public function actionPages(){
-
-		
+	public function actionPages(){		
 		$id = $_GET['a'];
 		$page = urldecode($_GET['p']);
-		$umkm = Umkm::model()->find('umkm_alias = ?',array($id));
+		$umkm = Umkm::model()->find('umkm_alias = ? AND umkm_status !='.Umkm::STATUS_SUSPENDED,array($id));
 		if($umkm === null)
 			throw new CHttpException(404,"Maaf, halaman yang anda cari tidak ditemukan :(");
 
@@ -164,7 +162,7 @@ class UController extends Controller
 		$id = ($id !== null)? $id : $_GET['a'];
 		// $id = (isset($_GET['id']))? $_GET['id'] : $id;
 
-		$umkm = Umkm::model()->find('umkm_alias = ?',array($id));
+		$umkm = Umkm::model()->find('umkm_alias = ? AND umkm_status !='.Umkm::STATUS_SUSPENDED,array($id));
 		if($umkm === null)
 			throw new CHttpException(404,"Maaf, halaman yang anda cari tidak ditemukan :(");
 			

@@ -54,6 +54,7 @@ class ControlpanelController extends Controller
 					'cekpesan',
 					'viewpesan',
 					'balaspesan',
+					'transaksikirimpembayaran',
 					'cekunreadmessage'),
 				'expression'=>'$user->isPengunjung()'),
 			array('allow',
@@ -70,7 +71,11 @@ class ControlpanelController extends Controller
 	{	
 		if(Yii::app()->user->isUmkm()){
 			$model = Admin::model()->find('admin_email = :email',array('email'=> Yii::app()->user->getEmail()));
-			$this->render('index',array('model'=>$model));
+			$rekening = Atribut::model()->findAll(array(
+				'condition'=>'at_kategori_id LIKE \'R.%\' AND at_umkm_id = '.Yii::app()->user->getUmkmId()));
+			$this->render('index',array(
+				'model'=>$model,
+				'rekening'=>$rekening));
 			exit();
 		}else if(Yii::app()->user->isPengunjung()){
 			$model = Pengunjung::model()->find('pgj_id = :id',array(':id'=> Yii::app()->user->_getId()));
@@ -290,6 +295,23 @@ class ControlpanelController extends Controller
 					'condition'=>'umkm_id = '.Yii::app()->user->getUmkmId())),
 		'condition'=>'trans_kodetrans = \''.$kodetrans .'\' AND trans_status = '.Transaksi::STATUS_ADD));
 
+		$daftarRekenings = Atribut::model()->findAll(array(
+			'with'=>array(
+				'atUmkm'=>array(
+					'condition'=>'umkm_id = \''.Yii::app()->user->getUmkmId().'\'',
+					'select'=>false),
+				'atKategori'=>array(
+					'select'=>'ka_nama',
+					'condition'=>'ka_id LIKE \'R.%\'')
+				),
+			'select'=>array('at_id','at_text'))
+			);
+		
+
+		foreach($daftarRekenings as $row){
+			$daftarRekening[$row->at_id] = $row->atKategori->ka_nama.' :: '.$row->at_text;
+		}
+
 		//update transaksi yang akan diappprove statusnya
 		$model = Transaksi::model()->updateAll(array(
 			'trans_status'=>Transaksi::STATUS_APPROVED,
@@ -301,13 +323,18 @@ class ControlpanelController extends Controller
 		
 		
 		//Me return halaman tagihan untuk pemesan | bukan render ke browser
-		$x = $this->renderPartial('transaksidetailfinal',array('model'=>$model2,'biaya'=>$biaya),true);
+		$x = $this->renderPartial('transaksidetailfinal',array(
+			'model'=>$model2,
+			'biaya'=>$biaya,
+			'daftarRekening'=>$daftarRekening,
+			),true);
+		
 		$mail = new SendMail();
 		$mail->isHTML(true);
 		$obj['subject'] = 'Tagihan UMKM';
 		$obj['body'] = $x;
 
-		$obj['destination_email'] = $model2[0]->transPgj->pgj_email;
+		$obj['destination_email'] = array($model2[0]->transPgj->pgj_email);
 		$obj['destination_name'] = $model2[0]->transPgj->pgj_nama;;
 		$mail->kirim($obj);
 		print "<script>";
@@ -317,18 +344,9 @@ class ControlpanelController extends Controller
 		
 	}
 
-	public function actionJajal(){
-		$mail = new SendMail();
-		$mail->isHTML(true);
-		$obj['subject'] = '';
-
-		$obj['destination_email'] = 'galihazizy@gmail.com';
-		$obj['destination_name'] = 'Mas Galih Azizi';
-		$mail->kirim($obj);
-		
-	}
 
 	public function actionTransaksiInfo($kodetrans=null){
+		//DANGER//DANGER//DANGER//DANGER//DANGER//DANGER//DANGER//DANGER//DANGER//DANGER
 		$kodetrans = ($kodetrans != null) ? $kodetrans : $_GET['kodetrans'];
 		$model = Transaksi::model()->findAll(array(
 			'with'=>array(
@@ -338,7 +356,109 @@ class ControlpanelController extends Controller
 					// 'condition'=>'umkm_id = '.Yii::app()->user->getUmkmId()
 					)),
 		'condition'=>'trans_kodetrans = \''.$kodetrans.'\''));
+		
 		$this->renderPartial('transaksiinfo',array('model'=>$model));
+	}
+
+	public function actionTransaksiKirimPembayaran($kodetrans=null){
+		$model = new KonfirmasiPembayaran;
+		$kodetrans = ($kodetrans != null) ? $kodetrans : $_GET['kodetrans'];
+		$transaksi = Transaksi::model()->findAll(array(
+			'with'=>array(
+				'transItem.itemProd.prodUmkm'=>array(
+					'joinType'=>'INNER JOIN',
+					'select'=>false,
+					)),
+		'condition'=>'trans_kodetrans = \''.$kodetrans.'\' AND trans_status='.Transaksi::STATUS_APPROVED));
+		if($transaksi == null)
+			throw new CHttpException(404,"Transaksi tidak ditemukan.");
+
+		foreach ($transaksi as $row) {
+			$trans = $row;
+		}
+
+		$daftarRekenings = Atribut::model()->findAll(array(
+			'with'=>array(
+				'atUmkm.produks.items.transaksis'=>array(
+					'condition'=>'trans_kodetrans = \''.$kodetrans.'\'',
+					'select'=>false),
+				'atKategori'=>array(
+					'select'=>'ka_nama',
+					'condition'=>'ka_id LIKE \'R.%\'')
+				),
+			'select'=>array('at_id','at_text'))
+			);
+		
+
+		foreach($daftarRekenings as $row){
+			$daftarRekening[$row->at_id] = $row->atKategori->ka_nama.' :: '.$row->at_text;
+		}
+			
+		if(isset($_POST['KonfirmasiPembayaran'])){
+			$model->attributes = $_POST['KonfirmasiPembayaran'];
+			if($model->validate()){
+				$pes_pengirimtipe = Yii::app()->user->getTipe();
+				$pes_pengirimid = Yii::app()->user->_getId();
+				$pes_kategori = 'ME.02';
+				$pes_tanggal = date('Y-m-d H:i:s');
+				$pes_tujuantipe = LevelLookup::ACCOUNT_UMKM;
+				$pes_judul = "Konfirmasi Pembayaran ".$trans->trans_kodetrans;
+				$pes_isi = "Pengunjung telah mengirimkan konfirmasi bahwa 
+				transaksi dengan kode <font style='color: red'><b>".$trans->trans_kodetrans."</b></font> telah dibayar melalui ".$daftarRekening[$model->rekeningtujuan].
+				" pada ".$model->tanggal." dengan jumlah pembayaran sebesar <font style='color: red'><b>Rp. ".number_format($model->nominal,0,'.','.')."</b></font> .
+				Pengirim :".$model->pemilikrekening." :: ".$model->rekeningasal."
+				Untuk melihat rincian transaksi <a href='".$this->createAbsoluteUrl('controlpanel/transaksi',array('q'=>$trans->trans_kodetrans))."' >Klik Disini </a>";
+				
+				try{
+					Transaksi::model()->updateAll(array('trans_status'=>Transaksi::STATUS_CHECK),
+					'trans_kodetrans = :kodetrans',
+					 array(':kodetrans'=>$kodetrans)
+					);
+				}
+				catch(CDbException $e){
+					throw new CHttpException(500,"This is very unwell, rawell");
+					
+				}					
+
+				$mailobj['subject'] = $pes_judul;
+				$mailobj['body'] = $pes_isi;
+				$mailobj['destination_name'] = 'Admin '.$trans->transItem->itemProd->prodUmkm->umkm_nama;
+				$mailobj['destination_email'] = '';
+
+
+
+				foreach($trans->transItem->itemProd->prodUmkm->admins as $admin){
+					$message = new Pesan;
+					$message->pes_pengirimtipe = $pes_pengirimtipe;
+					$message->pes_pengirimid = $pes_pengirimid;
+					$message->pes_kategori = $pes_kategori;
+					$message->pes_tanggal = $pes_tanggal;
+					$message->pes_tujuantipe = $pes_tujuantipe;
+					$message->pes_tujuanid = $admin->admin_id;
+					$message->pes_judul = $pes_judul;
+					$message->pes_isi = $pes_isi;
+					if(!$message->save()){
+						throw new CHttpException(500,"Something goes wrong :( message->save()");
+					}
+
+					$maildestination[] = $admin->admin_email;
+				}			
+
+				$mailobj['destination_email'] = $maildestination;
+				
+				$mail = new SendMail();
+				if(!$mail->kirim($mailobj))
+					throw new CHttpException(400,"Error Connecting to mail server, check your internet connection");
+					
+				Yii::app()->user->setFlash('info','Konfirmasi Pembayaran telah dikirim kepada UMKM, pihak UMKM akan melakukan verifikasi terhadap pembayaran yang telah anda lakukan.');
+				$this->redirect($this->createUrl('controlpanel/vtransaksi'));
+			}
+
+		}
+
+
+		$model->kodetransaksi = $trans->trans_kodetrans;
+		$this->render('transaksikirimpembayaran',array('daftarRekening'=>$daftarRekening,'trans'=>$trans,'model'=>$model));
 	}
 
 	public function actionTransaksiAbort($kodetrans=null){

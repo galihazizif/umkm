@@ -82,7 +82,7 @@ class SiteController extends Controller
 
 		$dependency = new CCacheDependency('select MAX(umkm_id) from umkm');
 		$dataProvider = new CActiveDataProvider(
-			Umkm::model()->cache(3600,$dependency,2),array(
+			Umkm::model()->cache(500,$dependency,1),array(
 				'pagination'=>array(
 			 			'pageSize'=>5))
 				);
@@ -398,9 +398,6 @@ class SiteController extends Controller
 					$umkm->attributes = $model->attributes;
 					$umkm->umkm_lokasi_kode = $model->desa;
 					$umkm->umkm_tanggal = date('Y-m-d H:i:s');
-					// print_r($model->attributes);
-					// print_r($umkm->attributes);;
-					// exit();
 					if($umkm->save()){
 						$admin = new Admin();
 						$admin->admin_umkm_id 	= $umkm->umkm_id;
@@ -424,8 +421,7 @@ class SiteController extends Controller
 					
 				}else{
 					$model->addError('umkm_email','Email sudah dipakai, silahakan gunakan yang lain');
-				}
-				
+				}			
 				
 			}
 		}

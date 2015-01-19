@@ -75,17 +75,15 @@ $this->pageTitle = Yii::app()->name.' - Pengaturan';
 		<div class="row span5">
 		<ul class="nav nav-tabs" id="myTab">
 		<?php if(Yii::app()->user->isUmkmOwner()):?>
-		  <li class="active"><a data-toggle="tab" href="#home">Pengelola UMKM</a></li>
+		  <li><a data-toggle="tab" id="thome" href="#home">Pengelola UMKM</a></li>
 		<?php endif;?>
-		  <li><a data-toggle="tab" href="#profile">Profile</a></li>
-		  <li><a data-toggle="tab" href="#messages">Messages</a></li>
-		  <li><a data-toggle="tab" href="#settings">Settings</a></li>
+		  <li><a data-toggle="tab" id="trekening" href="#rekening">Rekening</a></li>
 		</ul>
  
 		<div class="tab-content">
 		<?php if(Yii::app()->user->isUmkmOwner()):?>
-		  <div class="tab-pane active" id="home">
-		  	<table class="table table-condensed">
+		  <div class="tab-pane" id="home">
+		  	<table class="table table-condensed table-striped table-bordered">
 		  		<tr><th>Email</th><th>...</th></tr>
 		  	<?php foreach($model->adminUmkm->admins as $admin):?>
 		  		<tr><td><?php print $admin->admin_email; ?></td><td>
@@ -101,16 +99,28 @@ $this->pageTitle = Yii::app()->name.' - Pengaturan';
 				'success'=>'js:function(data){$("#myModal").html(data);}'),
 			array('class' =>'btn btn-primary'));?>
 		  </div>
-		  <br>
+		 <br>
 		<?php endif;?>
-		  <div class="tab-pane" id="profile">profile</div>
-		  <div class="tab-pane" id="messages">Messages</div>
-		  <div class="tab-pane" id="settings">Settting</div>
+		  <div class="tab-pane" id="rekening">
+		  	<table class="table table-condensed table-bordered table-striped">
+		  	<tr><th>Rekening</th><th>Nomor</th><th>...</th></tr>
+		  	<?php foreach($rekening as $row):?>
+		  	<tr>
+		  		<td><?php echo $row->atKategori->ka_nama;?></td>
+		  		<td><?php echo $row->at_text;?></td>
+		  		<td><?php echo CHtml::link('x',array('atribut/xdelete','id'=>$row->at_id),array('class'=>'btn btn-mini','confirm'=>'Hapus rekening ini?'));?></td>
+		  	</tr>
+		  	<?php endforeach;?>
+		  	</table>
+		  	<button type="buton" class="btn btn-primary" u-url="<?php echo $this->createUrl('atribut/createrekening');?>" onClick="oAjaxLink(this,true)">Tambah Rekening Bank</button>
+		  </div>
+		  <br>
 		</div>
  
 		<script>
+		mhash = (window.location.hash == '')? '#trekening': window.location.hash;
 		  $(function () {
-		    $('#myTab a:first').tab('show');
+		    $(mhash).click();
 		  })
 		</script>
 	</div>	

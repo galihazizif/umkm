@@ -6,11 +6,12 @@ $this->breadcrumbs=array(
 );
 $this->pageTitle = Yii::app()->name.' - Pesan';
 ?>
-<h4>Pesan Masuk</h4>
+<h4><i class="icon-envelope"></i> Pesan Masuk</h4>
+<hr>
 <div class="row">
 	<div class="span8">
 		<small>
-		<table class="table table-condensed table-hover">
+		<table class="table table-condensed table-hover table-bordered">
 			<tr>
 				<th>
 					Pengirim

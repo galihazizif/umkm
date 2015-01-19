@@ -44,6 +44,8 @@ foreach ($model as $key => $value) {
 			break;
 		case Transaksi::STATUS_ABORTED :
 			$class = 'info';
+		case Transaksi::STATUS_CHECK :
+			$class = 'info';
 			break;
 	}
 
@@ -57,10 +59,13 @@ foreach ($model as $key => $value) {
 	if($value->trans_status == Transaksi::STATUS_ADD){
 		print '<a class="btn btn-mini btn-primary" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksidetail',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-ok icon-white"></i></a> ';
 		print '<a class="btn btn-danger btn-mini" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksiabort',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-remove icon-white"></i></a>';
+		print '<a class="btn btn-mini btn-info" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksiinfo',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-info-sign icon-white"></i></a> ';
 	}else if($value->trans_status == Transaksi::STATUS_APPROVED){
-		print '<a class="btn btn-mini btn-primary" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksipayment',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-ok icon-white"></i></a> ';
+		// print '<a class="btn btn-mini btn-primary" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksipayment',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-ok icon-white"></i></a> ';
+		print '<a class="btn btn-mini btn-info" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksiinfo',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-info-sign icon-white"></i></a> ';
 	}else if($value->trans_status == Transaksi::STATUS_PAID){
-		print '<a class="btn btn-mini btn-primary" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksipaid',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-ok icon-white"></i></a> ';
+		// print '<a class="btn btn-mini btn-primary" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksipaid',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-ok icon-white"></i></a> ';
+		print '<a class="btn btn-mini btn-info" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksiinfo',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-info-sign icon-white"></i></a> ';
 	}else{
 		print '<a class="btn btn-mini btn-info" onclick="oAjaxLink(this,true)" u-url="'.$this->createUrl('controlpanel/transaksiinfo',array('kodetrans'=>$value->trans_kodetrans)).'"><i class="icon-info-sign icon-white"></i></a> ';
 	}

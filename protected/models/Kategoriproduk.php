@@ -31,6 +31,7 @@ class Kategoriproduk extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('kat_id, kat_nama', 'required'),
+			array('kat_id','unique'),
 			array('kat_status', 'numerical', 'integerOnly'=>true),
 			array('kat_id', 'length', 'max'=>7),
 			array('kat_nama', 'length', 'max'=>45),

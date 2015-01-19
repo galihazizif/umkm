@@ -31,6 +31,7 @@ class Kategoriatribut extends CActiveRecord
 		return array(
 			array('ka_id, ka_nama', 'required'),
 			array('ka_id', 'length', 'max'=>5),
+			array('ka_id', 'unique'),
 			array('ka_nama', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

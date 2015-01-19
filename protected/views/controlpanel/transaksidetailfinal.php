@@ -1,6 +1,7 @@
 <?php foreach ($model as $v) {
 	# code...
-}?>
+}
+?>
 <html>
 <head>
 	<style type="text/css">
@@ -45,6 +46,18 @@ Anda menerima email ini karena telah memesan produk pada <?php print $v->transIt
 		<td style="text-align: right"><?php print number_format($sum+$biaya,0,',','.');?>*</td>
 	</tr>
 </table>
+Pembayaran dapat dilakukan melalui rekening dibawah ini.
+<table class="table">
+	<?php foreach($daftarRekening as $rekening):?>
+		<tr>
+			<td><?php echo $rekening;?></td>
+		</tr>
+	<?php endforeach;?>
+</table>
+<br><br>
+Setelah melakukan pembayaran, anda harus melakukan konfirmasi melalui tautan berikut ini. 
+<a href="<?php echo $this->createAbsoluteUrl('controlpanel/transaksikirimpembayaran',array('kodetrans'=>$value->trans_kodetrans));?>">Klik Disini</a>
+
 <p>Pesanan akan dikirimkan kepada:</p>
 <p><b><?php print $value->transPgj->pgj_nama;?></b><br>
 	<?php print $value->transPgj->pgj_alamat.' '.$value->transPgj->pgjLokasiKode->alamatLengkap(); ?><br><strong><? echo $value->transPgj->pgj_nohp;?></strong>

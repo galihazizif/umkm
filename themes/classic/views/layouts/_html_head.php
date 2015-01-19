@@ -1,7 +1,7 @@
 <head>
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 	<meta charset="UTF-8">
-	<meta property="og:description" content="Unyumas, memudahkan Pengusaha di wilayah Banyumas dan sekitarnya mengenalkan produknya.">
+	<meta property="description" content="Unyumas, memudahkan Pengusaha di wilayah Banyumas dan sekitarnya mengenalkan produknya.">
 	<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl?>/public/assets/js/bootstrap.js"></script>
 	<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl?>/public/assets/js/bootstrap-collapse.js"></script>

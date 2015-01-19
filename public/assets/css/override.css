@@ -27,7 +27,7 @@
 
 .modal{
 	width: 750px;
-	max-height: 550px;
+	/*height: 2000px;*/
 	overflow-y: auto;  
 }
 
@@ -198,7 +198,7 @@
 }
 
 #instantreg{
-	background-image: linear-gradient(to bottom, #b6b6b5, #cccccc);
+	background-image: linear-gradient(to bottom, #ffffff, #cccccc);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: dashed 1px gray;

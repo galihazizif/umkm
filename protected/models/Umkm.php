@@ -89,6 +89,7 @@ class Umkm extends CActiveRecord
 			'admins' => array(self::HAS_MANY, 'Admin', 'admin_umkm_id'),
 			'kustomisasi' => array(self::HAS_ONE, 'Kustomisasi', 'kus_umkm_id'),
 			'produks' => array(self::HAS_MANY, 'Produk', 'prod_umkm_id'),
+			'atributs' => array(self::HAS_MANY, 'Atribut', 'at_umkm_id'),
 			'umkmLokasiKode' => array(self::BELONGS_TO, 'Lokasi', 'umkm_lokasi_kode'),
 		);
 	}

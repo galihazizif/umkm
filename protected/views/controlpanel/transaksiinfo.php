@@ -48,15 +48,33 @@
 </p>
 </div>
 <?php if(Yii::app()->user->isPengunjung() && $value->trans_status == Transaksi::STATUS_APPROVED):?>
-<form class="span3" id="formKonfirmasiPembayaran">
-	<p>Konfirmasi pembayaran pesanan.</p>
-	<label for="kodetrans">Kode Transaksi</label>
-	<input type="text" nama="kodetrans" id="kodetrans" value="<?php echo $value->trans_kodetrans; ?>">
-	<label for="kodetrans"></label>
-	<input nama="kodetrans" id="kodetrans" value="<?php echo $value->trans_kodetrans; ?>">
-	<button class="btn">Konfirmasi</button>
-
-</form>
-
+<div class="span4">
+	<a class="btn btn-primary btn-large btn-block" href="<?php echo $this->createUrl('controlpanel/transaksikirimpembayaran',array('kodetrans'=>$value->trans_kodetrans));?>">Konfirmasi Pembayaran</a>
+</div>
 <?php endif;?>
+
+<?php if(Yii::app()->user->isUmkm() && $value->trans_status == Transaksi::STATUS_CHECK):?>
+<div class="span3">
+	<button data-dismiss="modal" type="button" class="btn"><i class="icon-hand-left"></i> Kembali</button>
+	<a href="#" onclick="oAjaxLink(this)" class="btn btn-primary" u-url="<?php print $this->createUrl('controlpanel/transaksipayment',array('kodetrans'=>$value->trans_kodetrans,'do'=>'paid'));?>"><i class="icon-hand-right icon-white"></i> Terbayar</a>
+</div>
+<?php endif;?>
+
+<?php if(Yii::app()->user->isUmkm() && $value->trans_status == Transaksi::STATUS_APPROVED):?>
+<div class="span3">
+	<button data-dismiss="modal" type="button" class="btn"><i class="icon-hand-left"></i> Kembali</button>
+	<a href="#" onclick="oAjaxLink(this)" class="btn btn-primary" u-url="<?php print $this->createUrl('controlpanel/transaksipayment',array('kodetrans'=>$value->trans_kodetrans,'do'=>'paid'));?>"><i class="icon-hand-right icon-white"></i> Terbayar</a>
+</div>
+<?php endif;?>
+
+<?php if(Yii::app()->user->isUmkm() && $value->trans_status == Transaksi::STATUS_PAID):?>
+<div class="span3">
+		<form id="formtrans">
+			<textarea name="Transaksi[trans_keterangan]" class="span3" style=" min-height: 100px;max-height: 150px; max-width: 100%" name="Transaksi[trans_keterangan]" placeholder="misal: nomor resi pengiriman dll"></textarea>
+		</form>
+		<button data-dismiss="modal" type="button" class="btn btn-block"><i class="icon-hand-left"></i> Barang Belum Dikirim</button>
+		<a href="#" onclick="newXhrSubmit(this,'#formtrans')" class="btn btn-primary btn-block" u-url="<?php print $this->createUrl('controlpanel/transaksipaid',array('kodetrans'=>$value->trans_kodetrans,'do'=>'paid'));?>"><i class="icon-hand-right icon-white"></i> Kirim Pemberitahuan Pengiriman Barang</a>
+</div>
+<?php endif;?>
+
 </div>

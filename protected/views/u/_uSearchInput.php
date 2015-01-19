@@ -2,7 +2,7 @@
 	<div class="offset1 span4">
 		<form method="GET" action="<?php print $this->createUrl('u/search',array('a'=>$umkm->umkm_alias));?>">
 			<div class="input-append">
-				<input name="q" class="span4" placeholder="Temukan produk di <?php echo $umkm->umkm_nama;?>" id="appendedInputButtons" type="text">
+				<input name="q" class="span4" placeholder="Temukan produk di <?php echo $umkm->umkm_nama;?>" id="appendedInputButtons" value="<?php echo isset($_GET['q'])? $_GET['q']: '';?>" type="text">
 				<button type="button" onclick="submit();" class="btn btn-warning"><i class="icon-search icon-white"></i> Cari</button>
 			</div>
 		</form>

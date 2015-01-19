@@ -20,6 +20,7 @@ class Transaksi extends CActiveRecord
 
 		const STATUS_ADD = 1;
 		const STATUS_APPROVED = 2;
+		const STATUS_CHECK = 5;
 		const STATUS_PAID = 3;
 		const STATUS_SENT = 4;
 		const STATUS_ABORTED = 9;
@@ -95,6 +96,8 @@ class Transaksi extends CActiveRecord
 				break;
 			case self::STATUS_ABORTED:
 				return 'Batal';
+			case self::STATUS_CHECK:
+				return 'Validasi Pembayaran';
 				break;
 		}
 	}

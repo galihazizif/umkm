@@ -5,6 +5,7 @@ require_once(dirname(__FILE__).'/../extensions/PHPMailer/PHPMailerAutoload.php')
 class SendMail extends PHPMailer{
 
 	private $_hasSmtpServer = false;
+	public $isHTML = true;
 
 	public function kirim($obj){
 		// array obj Index
@@ -46,7 +47,7 @@ class SendMail extends PHPMailer{
 		$this->setFrom('umkm.banyumas@gmail.com', Yii::app()->name);
 
 		//Set who the message is to be sent to
-		$this->addAddress($obj['destination_email'], $obj['destination_name']);
+		// $this->addAddress($obj['destination_email'], $obj['destination_name']);
 
 		//Set the subject line
 		$this->Subject = $obj['subject'];
@@ -58,18 +59,32 @@ class SendMail extends PHPMailer{
 
 		//Attach an image file
 		// $this->addAttachment('images/phpmailer_mini.png');
-		
+		$dest = '';
 		if($this->_hasSmtpServer == true){
+
+			foreach ($obj['destination_email'] as $key => $value) {
+				$dest = $dest.$value.',';
+			}
+
+			//remove trailing comma
+			$dest = substr($dest,0,-1);
+
 			$ctype = ($this->isHTML) ? 'text/html': 'text/plain';
 
-			$headers="From: UMKM <no-reply@juragan.web.id>\r\n".
-					"Reply-To: no-reply@juragan.web.id\r\n".
+			$headers="From: UMKM <no-reply@unyumas.asia>\r\n".
+					"Reply-To: no-reply@unyumas.asia\r\n".
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: $ctype";
 
-			mail($obj['destination_email'],$obj['subject'],$obj['body'],$headers);			
+			mail($dest,$obj['subject'],$obj['body'],$headers);			
 			return true;
 		}else{
+			foreach ($obj['destination_email'] as $key => $value) {
+				$this->addAddress($value, $obj['destination_name']);
+			}
+
+			$this->isHTML();
+
 			if($this->send()){
 				return true;
 			}else{

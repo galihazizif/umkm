@@ -30,7 +30,7 @@ class RegisterUmkmForm extends CFormModel
 			// name, email, subject and body are required
 			array('umkm_nama, umkm_deskripsi, umkm_email, umkm_password, cemail, cpassword, provinsi, kabupaten, kecamatan, desa', 'required'),
 			// email has to be a valid email address
-			array('umkm_alias', 'length','min'=> 6,'max'=> 15),
+			array('umkm_alias', 'length','max'=> 15),
 			array('umkm_email', 'email'),
 			array('umkm_password', 'length','min'=> 6,'max'=> 20),
 			array('umkm_password', 'compare','compareAttribute'=>'cpassword'),

@@ -17,6 +17,17 @@
  * The followings are the available model relations:
  * @property Kategoriatribut $pesKategori
  */
+
+/*
+GUIDE
+$pesan->pes_pengirimtipe = Yii::app()->user->getTipe();
+					$pesan->pes_pengirimid = Yii::app()->user->_getId();
+					$pesan->pes_isi = $model->body;
+					$pesan->pes_kategori = 'ME.01';
+
+*/
+
+
 class Pesan extends CActiveRecord
 {
 	/**
@@ -39,8 +50,8 @@ class Pesan extends CActiveRecord
 			array('pes_pengirimtipe, pes_pengirimid, pes_tujuantipe, pes_tujuanid', 'numerical', 'integerOnly'=>true),
 			array('pes_id', 'length', 'max'=>10),
 			array('pes_kategori', 'length', 'max'=>5),
-			array('pes_judul', 'length', 'max'=>45),
-			array('pes_isi', 'length', 'max'=>350),
+			array('pes_judul', 'length', 'max'=>100),
+			array('pes_isi', 'length', 'max'=>600),
 
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
