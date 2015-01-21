@@ -407,7 +407,7 @@ class SiteController extends Controller
 						$admin->admin_isowner 	= 1;
 
 						$umkmEmailConf = array(
-							'destination_email'=> $umkm->umkm_email,
+							'destination_email'=> array($umkm->umkm_email),
 							'destination_name' => $umkm->umkm_nama,
 							'body' => sha1($admin->admin_regdate.'-'.$umkm->umkm_id)
 							);
@@ -479,7 +479,7 @@ class SiteController extends Controller
 		// *destination_name
 
 		$obj['subject'] = 'Konfirmasi pendafataran UMKM';
-		$obj['body'] = 'Selamat bergabung '.$obj['destination_name'].', untuk mengaktifkan akun anda di UMKM, klik link berikut '.CController::createAbsoluteUrl('site/umkmemailconf',array('cfcd'=>$obj['body'],'sbj'=>urlencode($obj['destination_email'])));
+		$obj['body'] = 'Selamat bergabung '.$obj['destination_name'].', untuk mengaktifkan akun anda di UMKM, klik link berikut '.CController::createAbsoluteUrl('site/umkmemailconf',array('cfcd'=>$obj['body'],'sbj'=>urlencode($obj['destination_email'][0])));
 
 		$mail = new SendMail();
 		return ($mail->kirim($obj)) ? true : false;
@@ -495,7 +495,7 @@ class SiteController extends Controller
 				if($admin != null){
 
 						$umkmEmailConf = array(
-							'destination_email'=> $admin->admin_email,
+							'destination_email'=> array($admin->admin_email),
 							'destination_name' => $admin->adminUmkm->umkm_nama,
 							'body' => sha1($admin->admin_regdate.'-'.$admin->adminUmkm->umkm_id)
 							);
@@ -668,7 +668,7 @@ class SiteController extends Controller
 		$mail = new SendMail;
 		$mail->isHTML(true);
 		$obj['subject'] = 'Reset akun UMKM';
-		$obj['destination_email'] = $umkm->admin_email;
+		$obj['destination_email'] = array($umkm->admin_email);
 		$obj['destination_name'] = '';
 		$obj['body'] = 'Untuk mengatur ulang kata sandi akun UMKM anda silahkan klik tautan berikut ini';
 		$obj['body'] .= "<a href='".$this->createAbsoluteUrl('site/confirmresetpasswordumkm',array('cfcd'=>$model->ver_cfcd))."'> Reset</a>";
@@ -686,7 +686,7 @@ class SiteController extends Controller
 		$mail = new SendMail;
 		$mail->isHTML(true);
 		$obj['subject'] = 'Reset akun pengunjung';
-		$obj['destination_email'] = $pengunjung->pgj_email;
+		$obj['destination_email'] = array($pengunjung->pgj_email);
 		$obj['destination_name'] = '';
 		$obj['body'] = 'Untuk mengatur ulang kata sandi akun anda silahkan klik tautan berikut ini';
 		$obj['body'] .= "<a href='".$this->createAbsoluteUrl('site/confirmresetpasswordpgj',array('cfcd'=>$model->ver_cfcd))."'> Reset</a>";
