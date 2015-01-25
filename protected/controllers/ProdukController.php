@@ -111,8 +111,8 @@ class ProdukController extends Controller
 		$model=$this->loadModel($id);
 		if($model->prod_umkm_id != Yii::app()->user->getUmkmId())
 		{
-			Yii::app()->user->setFlash('info','Unauthorized Access, redirected.');
-			$this->redirect($this->createUrl('produk/admin'));
+			throw new CHttpException(400,"Anda tidak memiliki izin untuk mengakses halaman ini.");
+			
 			Yii::app()->end();
 		}
 

@@ -28,7 +28,7 @@ class AdminController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view','create','update','admin'),
+				'actions'=>array('index','view','create','update','admin','delete'),
 				'expression'=>'$user->isSysAdmin()',
 			),
 			array('deny',  // deny all users

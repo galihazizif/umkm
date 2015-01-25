@@ -16,10 +16,10 @@ $this->pageTitle = $umkm->umkm_nama.' - Pencarian';
 		<?php $this->widget('zii.widgets.CListView', array(
 			'dataProvider'=>$dataProvider,
 			'itemView'=>'_detail',
-			'summaryText'=>(isset($q))?'Hasil pencarian \''.$q.'\'':'Produk '.$umkm->umkm_nama,
-			'summaryCssClass'=>'span3',
+			'summaryText'=>(isset($q))?'<h5>Hasil pencarian \''.$q.'\'</h5>':'<h5>Produk '.$umkm->umkm_nama.'</h5>',
+			'summaryCssClass'=>'span5',
 			'emptyTagName'=>'div',
-			'emptyText'=>'Belum ada produk',
+			'emptyText'=>'Produk Tidak Ditemukan',
 			'pager'=>array(
 				'class'=>'CLinkPager',
 				'header'=>' ',

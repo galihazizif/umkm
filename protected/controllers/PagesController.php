@@ -73,6 +73,7 @@ class PagesController extends Controller
 			$model->p_alias = $alias;
 			$model->p_kategori = "P.01";
 			if($model->save())
+				Yii::app()->user->setFlash('info','Halaman tambahan berhasil disimpan.');
 				$this->redirect(array('view','id'=>$model->p_id));
 		}
 
@@ -89,6 +90,9 @@ class PagesController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
+		if($model->p_umkm_id != Yii::app()->user->getUmkmId())
+			throw new CHttpException(400,"Anda tidak memiliki akses untuk melakukan hal ini.");
+			
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);

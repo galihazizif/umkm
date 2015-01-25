@@ -32,16 +32,11 @@ $('.search-form form').submit(function(){
 <p>Anda bisa menambahkan halaman tambahan untuk mengenalkan UMKM anda kepada pengunjung. Halaman ini bisa berisi tentang profil, tujuan, pengalaman usaha dan sebagainya.</p>
 <?php endif;?>
 
-<div class="search-form" style="display:none">
-<?php $this->renderPartial('_search',array(
-	'model'=>$model,
-)); ?>
-</div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'pages-grid',
 	'htmlOptions'=>array('class'=>''),
-	'itemsCssClass'=>'table table-bordered table-condensed table-hover sidemenu	',
+	'itemsCssClass'=>'table table-bordered table-condensed table-hover sidemenu',
 	'dataProvider'=>(Yii::app()->user->isSysAdmin())? $model->searchAll(): $model->search(),
 	// 'filter'=>$model,
 	'columns'=>array(

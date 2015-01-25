@@ -6,6 +6,7 @@ class SendMail{
 
 	// private $_hasSmtpServer = false;
 	private $_hasSmtpServer = true;
+	public $isHTML = true;
 
 	public function kirim($obj){
 		// array obj Index
@@ -53,7 +54,15 @@ class SendMail{
 		//Attach an image file
 		// $this->addAttachment('images/phpmailer_mini.png');
 		
+		$dest = '';
 		if($this->_hasSmtpServer == true){
+
+			foreach($obj['destination_email'] as $key => $value){
+				$dest = $dest.$value.',';
+			}
+
+			$dest = substr($dest, 0,-1);
+
 			$ctype = ($this->isHTML) ? 'text/html': 'text/plain';
 
 			$headers="From: UMKM <no-reply@juragan.web.id>\r\n".
@@ -61,7 +70,7 @@ class SendMail{
 					"MIME-Version: 1.0\r\n".
 					"Content-Type: $ctype";
 
-			mail($obj['destination_email'],$obj['subject'],$obj['body'],$headers);			
+			mail($dest,$obj['subject'],$obj['body'],$headers);			
 			return true;
 		}else{
 			if($this->send()){
