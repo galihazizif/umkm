@@ -70,6 +70,8 @@ class SiteController extends Controller
 			foreach ($queries as $key => $value) {
 				$criteria->addSearchCondition('umkm_nama',$value);		
 			}
+			if($q == '')
+				$criteria->condition = 'umkm_nama = \'\'';
 		}
 
 		
@@ -111,6 +113,8 @@ class SiteController extends Controller
 		if(isset($_GET['q'])){
 			$q = trim($_GET['q']);
 			$criteria->addSearchCondition('prod_nama',$q);
+			if($q == '')
+				$criteria->condition = 'prod_nama = \'\'';
 		}
 
 		$dependency = new CCacheDependency('SELECT MAX(prod_id) from produk');
@@ -536,7 +540,7 @@ class SiteController extends Controller
 					$this->redirect($this->createUrl('site/login'));
 				}
 
-				Yii::app()->user->setFlash('info','Kode verifikasi salah.');
+				Yii::app()->user->setFljash('info','Kode verifikasi salah.');
 				$this->redirect($this->createUrl('site/UmkmResendEmailConf'));
 
 			}else{

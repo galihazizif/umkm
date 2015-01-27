@@ -2,7 +2,7 @@
 /* @var $this UController */
 
 
-$this->pageTitle = $umkm->umkm_nama;
+$this->pageTitle = $umkm->umkm_nama.' - '.$model->prod_nama ;
 
 /*This is required for applying custom user interface for every umkm user*/
 

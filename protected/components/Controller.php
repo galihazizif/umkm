@@ -21,6 +21,7 @@ class Controller extends CController
 	 * be assigned to {@link CBreadcrumbs::links}. Please refer to {@link CBreadcrumbs::links}
 	 * for more details on how to specify this property.
 	 */
+
 	public $breadcrumbs=array();
 
 	public function init(){
@@ -30,3 +31,4 @@ class Controller extends CController
 
 	
 }
+

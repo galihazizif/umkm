@@ -79,12 +79,15 @@ class UController extends Controller
 			foreach ($queries as $key => $value) {
 				$criteria->addSearchCondition('prod_nama',$value,true,'OR');								
 			}
-		}else{
-			$criteria->addCondition("prod_nama = ''");		
 		}
 
 		$criteria->addCondition("prod_umkm_id =".$umkm->umkm_id);
 		$criteria->order = "prod_id DESC";
+
+		if(isset($_GET['q'])){
+			if(trim($_GET['q']) == '')
+				$criteria->condition = "prod_nama = ''";
+		}
 
 		$dp = new CActiveDataProvider('Produk', array(
 			'criteria'=>$criteria,
@@ -269,6 +272,26 @@ class UController extends Controller
 			$trans->rollback();
 			Yii::app()->user->setFlash('info','Transaksi GAGAL.');
 		}
+
+		$message = 'Seorang pengunjung melakukan pemesanan pada UMKM anda. Silahkan klik link 
+		<a href="'.$this->createAbsoluteUrl('controlpanel/transaksi',array('q'=>$kodetrans)).'">berikut ini</a> 
+		untuk melihat rincian.';
+
+		foreach($umkm->admins as $admin){
+			$maildestination[] = $admin->admin_email;
+		}
+
+		
+		
+			$mail = new SendMail();
+			$mailobj = array(
+							'destination_email'=> $maildestination,
+							'destination_name' => 'Pengelola '.$umkm->umkm_nama,
+							'subject'=>'Seorang pengunjung memesan produk pada UMKM anda.',
+							'body' => $message,
+						);
+			if(!$mail->kirim($mailobj))
+				throw new CHttpException(400,"Koneksi ke SMTP gagal.");
 
 		$this->redirect(Yii::app()->user->returnUrl);
 

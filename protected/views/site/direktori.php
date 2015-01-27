@@ -8,7 +8,7 @@
 	<?php if(isset($_GET['q'])):?>
 		<h5><i class="icon-search"></i> Hasil Pencarian</h5>
 			<?php if(trim($_GET['q']) == ''):?>
-				Masukan kata kunci untuk menyaring daftar UMKM.
+				Masukan kata kunci untuk mencari UMKM.
 			<?php else:?>
 				Kata Kunci "<?php echo trim($_GET['q']);?>""
 			<?php endif;?>
@@ -20,6 +20,7 @@
 			'dataProvider'=>$dataProvider,
 			'itemView'=>'_direktori',
 			'summaryText'=>'',
+			'emptyTagName'=>'h5',
 			'pager'=>array(
 				'class'=>'CLinkPager',
 				'header'=>' ',

@@ -63,6 +63,7 @@ $this->pageTitle=Yii::app()->name;
 			'dataProvider'=>$dataProvider,
 			'itemView'=>$display,
 			'summaryText'=>'',
+			'emptyTagName'=>'h5',
 			'pager'=>array(
 				'class'=>'CLinkPager',
 				'maxButtonCount'=>4,
