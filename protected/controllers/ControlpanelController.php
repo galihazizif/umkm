@@ -320,9 +320,22 @@ class ControlpanelController extends Controller
 			':kodetrans'=> $kodetrans));
 		if($model < 1)
 			throw new CHttpException(212,"Error Processing Request");
+
+		$message = new Pesan;
+		$message->pes_pengirimtipe = Yii::app()->user->getTipe();
+		$message->pes_pengirimid = Yii::app()->user->_getId();
+		$message->pes_kategori = 'ME.03';
+		$message->pes_tanggal = date('Y-m-d H:i:s');
+		$message->pes_tujuantipe = LevelLookup::ACCOUNT_VISITOR;
+		$message->pes_tujuanid = $model2[0]->transPgj->pgj_id;
+		$message->pes_judul = "Konfirmasi Pemesanan ".$model2[0]->trans_kodetrans;
+		$message->pes_isi = "Pesanan yang anda pesan telah dikonfirmasi, silahkan periksa email anda untuk melihat instruksi lebih lanjut. Untuk informasi mengenai pemesanan
+				  <a href='".$this->createAbsoluteUrl('controlpanel/vtransaksi',array('q'=>$model2[0]->trans_kodetrans))."' >Klik Disini </a>";
+		$message->save();		  
+
 		
 		
-		//Me return halaman tagihan untuk pemesan | bukan render ke browser
+		//Me return halaman tagihan untuk pemesan, kirim lewat email | bukan render ke browser
 		$x = $this->renderPartial('transaksidetailfinal',array(
 			'model'=>$model2,
 			'biaya'=>$biaya,
@@ -335,7 +348,7 @@ class ControlpanelController extends Controller
 		$obj['body'] = $x;
 
 		$obj['destination_email'] = array($model2[0]->transPgj->pgj_email);
-		$obj['destination_name'] = $model2[0]->transPgj->pgj_nama;;
+		$obj['destination_name'] = $model2[0]->transPgj->pgj_nama;
 		$mail->kirim($obj);
 		print "<script>";
 		print "loadingIcon('#myModal');";

@@ -8839,3 +8839,1333 @@ REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
 in /home/azizy/localsite/umkm/protected/extensions/PHPMailer/class.phpmailer.php (792)
 in /home/azizy/localsite/umkm/protected/extensions/PHPMailer/class.phpmailer.php (734)
 in /home/azizy/localsite/umkm/protected/components/SendMail.php (83)
+2015/01/27 12:26:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "ex" seperti yang diminta.' in /home/azizy/framework/web/CController.php:483
+Stack trace:
+#0 /home/azizy/framework/web/CController.php(270): CController->missingAction('ex')
+#1 /home/azizy/framework/web/CWebApplication.php(282): CController->run('ex')
+#2 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ex')
+#3 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/umkm/index.php/site/ex
+---
+2015/01/27 12:27:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Sistem tidak bisa menemukan action "ex" seperti yang diminta.' in /home/azizy/framework/web/CController.php:483
+Stack trace:
+#0 /home/azizy/framework/web/CController.php(270): CController->missingAction('ex')
+#1 /home/azizy/framework/web/CWebApplication.php(282): CController->run('ex')
+#2 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/ex')
+#3 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#4 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#5 {main}
+REQUEST_URI=/umkm/index.php/site/ex
+---
+2015/01/27 12:40:34 [error] [php] Trying to get property of non-object (/home/azizy/localsite/umkm/protected/controllers/UController.php:28)
+Stack trace:
+#0 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#1 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/site
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (28)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/27 12:41:19 [error] [php] Trying to get property of non-object (/home/azizy/localsite/umkm/protected/controllers/UController.php:28)
+Stack trace:
+#0 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#1 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/site
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (28)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/27 12:41:29 [error] [php] Trying to get property of non-object (/home/azizy/localsite/umkm/protected/controllers/UController.php:28)
+Stack trace:
+#0 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#1 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/site
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (28)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/27 12:41:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Tidak bisa mengurai request "site/index"' in /home/azizy/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/index')
+#1 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#3 {main}
+REQUEST_URI=/umkm/index.php/site/index
+---
+2015/01/27 12:48:27 [error] [php] Trying to get property of non-object (/home/azizy/localsite/umkm/protected/controllers/UController.php:28)
+Stack trace:
+#0 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#1 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/site/
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (28)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:05:19 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:05:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:06:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:06:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:06:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:07:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:07:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:07:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:08:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:08:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:10:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:11:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /home/azizy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#1 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/azizy/framework/web/CWebApplication.php(282): CController->run('resetpasswordum...')
+#8 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/resetpassw...')
+#9 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:11:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /home/azizy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#1 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/azizy/framework/web/CWebApplication.php(282): CController->run('resetpasswordum...')
+#8 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/resetpassw...')
+#9 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:12:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /home/azizy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#1 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/azizy/framework/web/CWebApplication.php(282): CController->run('confirmresetpas...')
+#8 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/confirmres...')
+#9 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/umkm/index.php/site/confirmresetpasswordumkm?cfcd=225be5ad463370b3eaacc9474c7c3a0a6ef762d7
+---
+2015/01/28 15:13:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:13:10 [error] [exception.CHttpException.444] exception 'CHttpException' with message 'Password gagal diubah karena satu dan lain hal yang kemungkinan besar halaman error ini kecil munculnya' in /home/azizy/localsite/umkm/protected/controllers/SiteController.php:722
+Stack trace:
+#0 /home/azizy/framework/web/actions/CInlineAction.php(49): SiteController->actionConfirmResetPasswordUmkm()
+#1 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/azizy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/azizy/framework/web/CWebApplication.php(282): CController->run('confirmresetpas...')
+#10 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/confirmres...')
+#11 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/umkm/index.php/site/confirmresetpasswordumkm?cfcd=225be5ad463370b3eaacc9474c7c3a0a6ef762d7
+HTTP_REFERER=http://localhost/umkm/index.php/site/confirmresetpasswordumkm?cfcd=225be5ad463370b3eaacc9474c7c3a0a6ef762d7
+---
+2015/01/28 15:13:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:13:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:13:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Link sudah tidak berlaku.' in /home/azizy/localsite/umkm/protected/controllers/SiteController.php:711
+Stack trace:
+#0 /home/azizy/framework/web/actions/CInlineAction.php(49): SiteController->actionConfirmResetPasswordUmkm()
+#1 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /home/azizy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#3 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#6 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 /home/azizy/framework/web/CWebApplication.php(282): CController->run('confirmresetpas...')
+#10 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/confirmres...')
+#11 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#12 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#13 {main}
+REQUEST_URI=/umkm/index.php/site/confirmresetpasswordumkm?cfcd=225be5ad463370b3eaacc9474c7c3a0a6ef762d7
+---
+2015/01/28 15:13:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:14:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:14:25 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:14:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:14:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:15:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/transaksi
+---
+2015/01/28 15:15:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/site/resetpasswordumkm
+---
+2015/01/28 15:15:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel
+---
+2015/01/28 15:21:49 [warning] [application] Gagal mengeset atribut unsafe "cemail" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (407)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:21:49 [warning] [application] Gagal mengeset atribut unsafe "umkm_password" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (407)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:21:49 [warning] [application] Gagal mengeset atribut unsafe "cpassword" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (407)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:21:49 [warning] [application] Gagal mengeset atribut unsafe "verifyCode" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (407)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:21:49 [warning] [application] Gagal mengeset atribut unsafe "agreement" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (407)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:23:08 [warning] [application] Gagal mengeset atribut unsafe "umkm_imgurl" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/ControlpanelController.php (508)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/28 15:25:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:25:51 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:26:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:27:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:28:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:28:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:29:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:30:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:31:11 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:31:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:32:42 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:33:27 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:34:12 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:34:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:35:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:36:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:37:13 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:37:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:38:44 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:39:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:40:14 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/28 15:40:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php
+---
+2015/01/31 05:32:02 [error] [php] Undefined variable: model (/home/azizy/localsite/umkm/protected/views/site/_direktori.php:5)
+Stack trace:
+#0 /home/azizy/framework/zii/widgets/CListView.php(291): SiteController->renderFile()
+#1 /home/azizy/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#2 unknown(0): CListView->renderSection()
+#3 /home/azizy/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback()
+#4 /home/azizy/framework/zii/widgets/CBaseListView.php(135): CListView->renderContent()
+#5 /home/azizy/framework/web/CBaseController.php(173): CListView->run()
+#6 /home/azizy/localsite/umkm/protected/views/site/direktori.php(36): SiteController->widget()
+#7 /home/azizy/framework/web/CBaseController.php(126): require()
+#8 /home/azizy/framework/web/CBaseController.php(95): SiteController->renderInternal()
+#9 /home/azizy/framework/web/CController.php(869): SiteController->renderFile()
+#10 /home/azizy/framework/web/CController.php(782): SiteController->renderPartial()
+#11 /home/azizy/localsite/umkm/protected/controllers/SiteController.php(99): SiteController->render()
+#12 /home/azizy/framework/web/actions/CInlineAction.php(49): SiteController->actionDirektori()
+#13 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#14 /home/azizy/framework/web/filters/CFilterChain.php(133): SiteController->runAction()
+#15 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#16 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#17 /home/azizy/framework/web/filters/CInlineFilter.php(58): SiteController->filterAccessControl()
+#18 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#19 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#20 /home/azizy/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#21 /home/azizy/framework/web/CWebApplication.php(282): SiteController->run()
+#22 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#23 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/site/direktori
+in /home/azizy/localsite/umkm/protected/views/site/_direktori.php (5)
+in /home/azizy/localsite/umkm/protected/views/site/direktori.php (36)
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (99)
+2015/01/31 05:32:30 [error] [exception.CException] exception 'CException' with message 'Properti "Umkm.adminUmkm" tidak didefinisikan.' in /home/azizy/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/azizy/framework/db/ar/CActiveRecord.php(145): CComponent->__get('adminUmkm')
+#1 /home/azizy/localsite/umkm/protected/views/site/_direktori.php(5): CActiveRecord->__get('adminUmkm')
+#2 /home/azizy/framework/web/CBaseController.php(130): require('/home/azizy/loc...')
+#3 /home/azizy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/azizy/loc...', Array, false)
+#4 /home/azizy/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/home/azizy/loc...', Array)
+#5 /home/azizy/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /home/azizy/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\\w+)}/', Array, '{summary}\n{sort...')
+#8 /home/azizy/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#9 /home/azizy/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /home/azizy/localsite/umkm/protected/views/site/direktori.php(36): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /home/azizy/framework/web/CBaseController.php(126): require('/home/azizy/loc...')
+#12 /home/azizy/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/azizy/loc...', Array, true)
+#13 /home/azizy/framework/web/CController.php(869): CBaseController->renderFile('/home/azizy/loc...', Array, true)
+#14 /home/azizy/framework/web/CController.php(782): CController->renderPartial('direktori', Array, true)
+#15 /home/azizy/localsite/umkm/protected/controllers/SiteController.php(99): CController->render('direktori', Array)
+#16 /home/azizy/framework/web/actions/CInlineAction.php(49): SiteController->actionDirektori()
+#17 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /home/azizy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#24 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /home/azizy/framework/web/CWebApplication.php(282): CController->run('direktori')
+#26 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('site/direktori')
+#27 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#29 {main}
+REQUEST_URI=/umkm/index.php/site/direktori
+HTTP_REFERER=http://localhost/umkm/
+---
+2015/01/31 05:54:54 [warning] [application] Gagal mengeset atribut unsafe "cemail" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (408)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 05:54:54 [warning] [application] Gagal mengeset atribut unsafe "umkm_password" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (408)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 05:54:54 [warning] [application] Gagal mengeset atribut unsafe "cpassword" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (408)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 05:54:54 [warning] [application] Gagal mengeset atribut unsafe "verifyCode" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (408)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 05:54:54 [warning] [application] Gagal mengeset atribut unsafe "agreement" dari kelas "Umkm".
+in /home/azizy/localsite/umkm/protected/controllers/SiteController.php (408)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 09:26:16 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:27:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:27:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:28:31 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:29:17 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:30:03 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:30:48 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Harus Login' in /home/azizy/framework/web/auth/CWebUser.php:394
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(180): CWebUser->loginRequired()
+#1 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#2 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#3 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/azizy/framework/web/CWebApplication.php(282): CController->run('cekunreadmessag...')
+#9 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/ce...')
+#10 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#12 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/cekunreadmessage
+HTTP_REFERER=http://localhost/umkm/index.php/kategoriatribut/view/id/ME.03
+---
+2015/01/31 09:31:56 [error] [exception.CException] exception 'CException' with message 'Pengunjung dan behaviornya tidak memiliki method ataupun closure bernama "findById"' in /home/azizy/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/azizy/framework/db/ar/CActiveRecord.php(227): CComponent->__call('findById', Array)
+#1 /home/azizy/localsite/umkm/protected/controllers/UController.php(221): CActiveRecord->__call('findById', Array)
+#2 /home/azizy/localsite/umkm/protected/controllers/UController.php(221): Pengunjung->findById('9')
+#3 [internal function]: UController->actionFinalCheckOut(NULL)
+#4 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs(Object(UController), Array)
+#5 /home/azizy/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(UController), Object(ReflectionMethod), Array)
+#6 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/azizy/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/azizy/framework/web/CWebApplication.php(282): CController->run('finalcheckout')
+#15 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('u/finalcheckout')
+#16 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#18 {main}
+REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
+HTTP_REFERER=http://localhost/umkm/index.php/ap.food6/checkout
+---
+2015/01/31 09:33:48 [error] [php] mb_strlen() expects parameter 1 to be string, object given (/home/azizy/framework/validators/CStringValidator.php:91)
+Stack trace:
+#0 /home/azizy/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/azizy/framework/db/ar/CActiveRecord.php(805): Pesan->validate()
+#2 /home/azizy/localsite/umkm/protected/controllers/UController.php(301): Pesan->save()
+#3 unknown(0): UController->actionFinalCheckOut()
+#4 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/azizy/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/azizy/framework/web/filters/CFilterChain.php(133): UController->runAction()
+#8 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/azizy/framework/web/filters/CInlineFilter.php(58): UController->filterAccessControl()
+#11 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/azizy/framework/web/CController.php(265): UController->runActionWithFilters()
+#14 /home/azizy/framework/web/CWebApplication.php(282): UController->run()
+#15 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (301)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 09:34:02 [error] [php] mb_strlen() expects parameter 1 to be string, object given (/home/azizy/framework/validators/CStringValidator.php:91)
+Stack trace:
+#0 /home/azizy/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/azizy/framework/db/ar/CActiveRecord.php(805): Pesan->validate()
+#2 /home/azizy/localsite/umkm/protected/controllers/UController.php(301): Pesan->save()
+#3 unknown(0): UController->actionFinalCheckOut()
+#4 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/azizy/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/azizy/framework/web/filters/CFilterChain.php(133): UController->runAction()
+#8 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/azizy/framework/web/filters/CInlineFilter.php(58): UController->filterAccessControl()
+#11 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/azizy/framework/web/CController.php(265): UController->runActionWithFilters()
+#14 /home/azizy/framework/web/CWebApplication.php(282): UController->run()
+#15 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (301)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 09:34:42 [error] [php] mb_strlen() expects parameter 1 to be string, object given (/home/azizy/framework/validators/CStringValidator.php:91)
+Stack trace:
+#0 /home/azizy/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/azizy/framework/db/ar/CActiveRecord.php(805): Pesan->validate()
+#2 /home/azizy/localsite/umkm/protected/controllers/UController.php(301): Pesan->save()
+#3 unknown(0): UController->actionFinalCheckOut()
+#4 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/azizy/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/azizy/framework/web/filters/CFilterChain.php(133): UController->runAction()
+#8 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/azizy/framework/web/filters/CInlineFilter.php(58): UController->filterAccessControl()
+#11 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/azizy/framework/web/CController.php(265): UController->runActionWithFilters()
+#14 /home/azizy/framework/web/CWebApplication.php(282): UController->run()
+#15 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (301)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 09:38:06 [error] [php] mb_strlen() expects parameter 1 to be string, object given (/home/azizy/framework/validators/CStringValidator.php:91)
+Stack trace:
+#0 /home/azizy/framework/base/CModel.php(159): CStringValidator->validate()
+#1 /home/azizy/framework/db/ar/CActiveRecord.php(805): Pesan->validate()
+#2 /home/azizy/localsite/umkm/protected/controllers/UController.php(301): Pesan->save()
+#3 unknown(0): UController->actionFinalCheckOut()
+#4 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#5 /home/azizy/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/azizy/framework/web/filters/CFilterChain.php(133): UController->runAction()
+#8 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/azizy/framework/web/filters/CInlineFilter.php(58): UController->filterAccessControl()
+#11 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/azizy/framework/web/CController.php(265): UController->runActionWithFilters()
+#14 /home/azizy/framework/web/CWebApplication.php(282): UController->run()
+#15 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#17 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/ap.food6/finalcheckout
+in /home/azizy/localsite/umkm/protected/controllers/UController.php (301)
+in /home/azizy/localsite/umkm/index.php (12)
+2015/01/31 11:07:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /home/azizy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#1 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/azizy/framework/web/CWebApplication.php(282): CController->run('transaksikirimp...')
+#8 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/tr...')
+#9 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/transaksikirimpembayaran/kodetrans/14226718865754-9
+---
+2015/01/31 11:14:41 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Anda tidak diotorisasi untuk melakukan action ini.' in /home/azizy/framework/web/auth/CAccessControlFilter.php:182
+Stack trace:
+#0 /home/azizy/framework/web/auth/CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(XWebUser), 'Anda tidak diot...')
+#1 /home/azizy/framework/web/filters/CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 /home/azizy/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 /home/azizy/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#6 /home/azizy/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/azizy/framework/web/CWebApplication.php(282): CController->run('transaksi')
+#8 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController('controlpanel/tr...')
+#9 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#10 /home/azizy/localsite/umkm/index.php(12): CApplication->run()
+#11 {main}
+REQUEST_URI=/umkm/index.php/controlpanel/transaksi/q/14226718865754-9
+HTTP_REFERER=http://localhost/umkm/index.php/controlpanel/balaspesan/idpesan/76
+---
+2015/01/31 11:16:28 [error] [php] Undefined variable: value (/home/azizy/localsite/umkm/protected/views/controlpanel/transaksidetail.php:39)
+Stack trace:
+#0 /home/azizy/framework/web/CController.php(869): ControlpanelController->renderFile()
+#1 /home/azizy/localsite/umkm/protected/controllers/ControlpanelController.php(204): ControlpanelController->renderPartial()
+#2 unknown(0): ControlpanelController->actionTransaksiDetail()
+#3 /home/azizy/framework/web/actions/CAction.php(108): ReflectionMethod->invokeArgs()
+#4 /home/azizy/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#5 /home/azizy/framework/web/CController.php(308): CInlineAction->runWithParams()
+#6 /home/azizy/framework/web/filters/CFilterChain.php(133): ControlpanelController->runAction()
+#7 /home/azizy/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/azizy/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#9 /home/azizy/framework/web/filters/CInlineFilter.php(58): ControlpanelController->filterAccessControl()
+#10 /home/azizy/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#11 /home/azizy/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/azizy/framework/web/CController.php(265): ControlpanelController->runActionWithFilters()
+#13 /home/azizy/framework/web/CWebApplication.php(282): ControlpanelController->run()
+#14 /home/azizy/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#15 /home/azizy/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /home/azizy/localsite/umkm/index.php(12): CWebApplication->run()
+REQUEST_URI=/umkm/index.php/controlpanel/transaksidetail/kodetrans/14226716820708-9
+in /home/azizy/localsite/umkm/protected/views/controlpanel/transaksidetail.php (39)
+in /home/azizy/localsite/umkm/protected/controllers/ControlpanelController.php (204)
+in /home/azizy/localsite/umkm/index.php (12)

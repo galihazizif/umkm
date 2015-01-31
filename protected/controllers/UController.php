@@ -216,6 +216,9 @@ class UController extends Controller
 		$stat_akhir = Keranjang::STATUS_CHECKEDOUT;
 		$stat_awal  = Keranjang::STATUS_ADD;
 		$pgj_id 	= Yii::app()->user->_getId();
+		$tanggal 	= date('Y-m-d H:i:s');
+
+		$model_pengunjung = Pengunjung::model()->findByPk($pgj_id);
 
 		$conn = Yii::app()->db;
 
@@ -257,7 +260,7 @@ class UController extends Controller
 
 			$command2->bindParam(':kodetrans',$kodetrans);
 			$command2->bindParam(':pgjid',$pgj_id);
-			$command2->bindParam(':tanggal',date('Y-m-d H:i:s'));
+			$command2->bindParam(':tanggal',$tanggal);
 			$command2->bindParam(':session',$this->cart);
 			$command2->bindParam(':umkmid',$id);
 			$command2->bindParam(':status', $stat_awal);
@@ -273,11 +276,32 @@ class UController extends Controller
 			Yii::app()->user->setFlash('info','Transaksi GAGAL.');
 		}
 
-		$message = 'Seorang pengunjung melakukan pemesanan pada UMKM anda. Silahkan klik link 
+		$pes_pengirimtipe 	= Yii::app()->user->getTipe();
+		$pes_pengirimid 	= Yii::app()->user->_getId();
+		$pes_kategori		= 'ME.03';
+		$pes_tanggal 		= $tanggal;
+		$pes_tujuantipe 	= LevelLookup::ACCOUNT_UMKM;
+		$pes_judul 			= "Pemesanan produk dengan kode ".$kodetrans;
+
+		$pesan_isi = $model_pengunjung->pgj_nama.'|'.$model_pengunjung->pgj_nohp.'|'.' melakukan pemesanan pada UMKM anda. Silahkan klik link 
 		<a href="'.$this->createAbsoluteUrl('controlpanel/transaksi',array('q'=>$kodetrans)).'">berikut ini</a> 
 		untuk melihat rincian.';
 
 		foreach($umkm->admins as $admin){
+			$message = new Pesan;
+			$message->pes_pengirimtipe = $pes_pengirimtipe;
+			$message->pes_pengirimid = $pes_pengirimid;
+			$message->pes_kategori = $pes_kategori;
+			$message->pes_tanggal = $pes_tanggal;
+			$message->pes_tujuantipe = $pes_tujuantipe;
+			$message->pes_tujuanid = $admin->admin_id;
+			$message->pes_judul = $pes_judul;
+			$message->pes_isi = $pesan_isi;
+					
+			if(!$message->save()){
+				throw new CHttpException(500,"Something goes wrong :( message->save()");
+			}
+
 			$maildestination[] = $admin->admin_email;
 		}
 
@@ -288,7 +312,7 @@ class UController extends Controller
 							'destination_email'=> $maildestination,
 							'destination_name' => 'Pengelola '.$umkm->umkm_nama,
 							'subject'=>'Seorang pengunjung memesan produk pada UMKM anda.',
-							'body' => $message,
+							'body' => $pesan_isi,
 						);
 			if(!$mail->kirim($mailobj))
 				throw new CHttpException(400,"Koneksi ke SMTP gagal.");

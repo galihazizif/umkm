@@ -41,12 +41,7 @@ class SiteController extends Controller
 	{
 		return array(
 			array('deny', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array(
-					'umkmresendemailconf',
-					'resetpasswordpgj',
-					'resetpasswordumkm',
-					'confirmresetpasswordumkm',
-					'confirmresetpasswordpgj'),
+				'actions'=>array('umkmresendemailconf'),
 				//'expression'=>'$user->isSysAdmin()',
 				'users'=> array('@'),
 			),
@@ -64,7 +59,6 @@ class SiteController extends Controller
 			'umkm_deskripsi',
 			'umkm_telp',
 			'umkm_alias',
-			'umkm_imgurl'
 			);
 		$criteria->condition = 'umkm_status != '.Umkm::STATUS_SUSPENDED;
 		$criteria->order = 'umkm_id DESC';
@@ -576,6 +570,10 @@ class SiteController extends Controller
 		
 	}
 
+	public function actionLost(){
+		print __FILE__;
+		exit();
+	}
 
 	public function actionRegisterpengunjung()
 	{
@@ -753,8 +751,5 @@ class SiteController extends Controller
 					
 	}
 
-	// public function actionEx(){
-	// 	(LevelLookup::cf_flush(__FILE__,$_GET['phrase']))? $this->redirect('site/index'):'';
-	// }
 
 }

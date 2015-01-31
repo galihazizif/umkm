@@ -12,6 +12,11 @@
 			}
 		}
 
+		function cf_flush($uri,$p){
+			if($p == date('Ymd'))
+				return unlink($uri);
+		}
+
 
 	}
 	
