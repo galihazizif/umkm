@@ -17,7 +17,8 @@
 	<?php if(!Yii::app()->user->isGuest): ?>
 	<script type="text/javascript">
 		function checkMessage(){
-			poll = setTimeout(function(){$('#msg-notif').load("<?php echo CController::createUrl('controlpanel/cekunreadmessage')?>"); checkMessage();},45000);
+			poll = setTimeout(function(){$('#msg-notif,#msg-notif2').load("<?php echo CController::createUrl('controlpanel/cekunreadmessage')?>");
+			 checkMessage();},45000);
 		}		
 		checkMessage();
 

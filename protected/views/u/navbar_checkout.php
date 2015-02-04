@@ -9,12 +9,12 @@
 	<?php endif;?>
 	<?php if(!Yii::app()->user->isGuest):?>
 	<button type="button" data-toggle="dropdown" class="btn btn-small btn"><i class="icon-user"></i> <?php print Yii::app()->user->name;?> 
-		<span title="Pesan yang belum dibaca" id="msg-notif" class="badge badge-important"><?php $notif = $this->beginWidget('CekPesan'); echo $notif->cekPesan(); $this->endWidget();?></span>
+		<span title="Pesan yang belum dibaca" id="msg-notif" class="badge badge-important"><?php $notif = $this->beginWidget('CekPesan'); $num = $notif->cekPesan(); echo $num; $this->endWidget();?></span>
 
 	</button>
 	<ul class="dropdown-menu" style="border-radius: 0 0 0 0; padding: 0">
 		<div class="summary-box"><small>Anda login sebagai :<br><span class="label"><?php print LevelLookup::getAccountLabel(Yii::app()->user->getTipe());?></span></small></div>
-		<li><a href="<?php print $this->createUrl('controlpanel/cekpesan');?>"><i class="icon-envelope"></i> Pesan</a></li>
+		<li><a href="<?php print $this->createUrl('controlpanel/cekpesan');?>"><i class="icon-envelope"></i> Pesan <label class="badge badge-important" id="msg-notif2"><?php echo $num;?></label> </a></li>
 		<li><a href="<?php print $this->createUrl('controlpanel/index');?>"><i class="icon-wrench"></i> Control Panel</a></li>
 		<li><a href="<?php print $this->createUrl('site/logout');?>"><i class="icon-off"></i> Keluar</a></li>
 	</ul>

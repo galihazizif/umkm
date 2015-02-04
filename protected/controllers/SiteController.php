@@ -720,7 +720,7 @@ class SiteController extends Controller
 					$this->redirect('login');
 				}
 				else
-					throw new CHttpException(444,"Password gagal diubah karena satu dan lain hal yang kemungkinan besar halaman error ini kecil munculnya");
+					throw new CHttpException(444,"Password gagal diubah.");
 					
 			}
 		}

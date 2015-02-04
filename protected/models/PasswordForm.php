@@ -18,6 +18,7 @@ class PasswordForm extends CFormModel
 		return array(
 			// name, email, subject and body are required
 			array('password,conf_password', 'required'),
+			array('password','length','min'=>6,'max'=>20),
 			// email has to be a valid email address
 			array('password','compare','compareAttribute'=>'conf_password'),
 			// verifyCode needs to be entered correctly
